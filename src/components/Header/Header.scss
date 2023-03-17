@@ -1,0 +1,33 @@
+.container{
+  display: flex;
+  background: #2b832b;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  position: sticky;
+  height: 3rem;
+  top:0;
+  .left{
+    display: flex;
+    justify-content: start;
+    gap: 2rem;
+    margin-left: 2rem;
+
+    p{
+      padding: 5px;
+      font-weight: bold;
+
+    }
+  }
+  .right{
+    display: flex;
+    align-items: center;
+    margin-right: 3rem;
+    gap:20px;
+    img{
+      width: 2rem;
+
+
+    }
+  }
+}

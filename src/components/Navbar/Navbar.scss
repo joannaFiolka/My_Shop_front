@@ -1,0 +1,47 @@
+.containerN{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  height: 3rem;
+  top:3rem;
+  .logo{
+    display: flex;
+    align-items: center;
+    margin-left: 2rem;
+    img{
+  width: 2rem;
+    }
+    .logoText{
+      margin-left: 5px;
+      color: black;
+    }
+  }
+  .search{
+    display: flex;
+    gap:3px;
+    margin-top: 10px;
+    input{
+      width: 15rem;
+      padding: 0.5rem 0.5rem;
+    }
+    .btnSearch{
+      color: white;
+      background-color: black;
+      cursor: pointer;
+      border: none;
+      padding: 0.6rem;
+      width: 5rem;
+      border-radius: 5px;
+
+    }
+
+  }
+  .basket{
+    margin-right: 5rem;
+    margin-top:10px;
+    img{
+      width: 2rem;
+    }
+  }
+}

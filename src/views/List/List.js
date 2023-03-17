@@ -1,4 +1,4 @@
-import "./List.scss.scss"
+import "./List.scss"
 import {Product} from "../Product/Product";
 
 export const List = () => {
