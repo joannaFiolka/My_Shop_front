@@ -1,0 +1,30 @@
+.footer{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #b0aeae;
+
+
+
+    .info{
+      margin:30px 0;
+
+      p{
+    font-size: 12px;
+      }
+      span{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 5px;
+        font-size: 12px;
+        img{
+          width: 15px;
+          height: 15px;
+          margin-right: 10px;
+        }
+      }
+
+    }
+
+}
