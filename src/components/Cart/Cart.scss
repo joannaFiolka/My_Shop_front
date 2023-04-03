@@ -1,0 +1,139 @@
+.cart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  right: 20px;
+  top: 60px;
+  gap: 10px;
+  background-color: #fcfcf8;
+  -webkit-box-shadow: 0 0 7px -5px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 7 -5 rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  max-height: 80vh;
+  padding: 10px;
+  z-index: 999;
+  margin-bottom: 20px;
+
+  h1 {
+    margin-bottom: 30px;
+    color: gray;
+    font-weight: 400;
+    font-size: 24px;
+  }
+
+  .cartWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow-y: scroll;
+    margin: 0 auto;
+    top: 50px;
+    height: 100%;
+    scroll-behavior: auto;
+
+    .item {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-top: 5px;
+
+      img {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+
+      }
+
+      .details {
+        text-align: center;
+
+        h2 {
+          font-size: 18px;
+          font-weight: 500;
+        }
+
+        .btnQ {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 20px;
+
+          button {
+            border: navajowhite;
+            color: white;
+            background-color: #cecbcb;
+            font-size: 1rem;
+            width: 1.5rem;
+            height: 1.5rem;
+            border-radius: 4px;
+          }
+
+          p {
+            color: #7fb76c;
+          }
+        }
+
+        p {
+          color: #256b0d;
+          margin-bottom: 10px;
+          font-size: 16px;
+          font-weight: 500;
+        }
+      }
+
+      .delete {
+        width: 1.3rem;
+        height: 1.3rem;
+        cursor: pointer;
+      }
+
+    }
+  }
+
+  .totalPrice {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 500;
+    font-size: 18px;
+    margin-bottom: 20px;
+
+    span {
+      margin-left: 5px;
+    }
+  }
+
+  .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    a {
+      text-decoration: none;
+      width: 100%;
+      background-color: #256b0d;
+      color: white;
+      cursor: pointer;
+      border-radius: 5px;
+      font-size: 1.2rem;
+      border: none;
+      padding: 5px 10px;
+    }
+
+    .deleteCart {
+      width: 50%;
+      background-color: #7e3938;
+      color: white;
+      cursor: pointer;
+      border-radius: 5px;
+      font-size: 0.8rem;
+      border: none;
+      padding: 5px;
+      margin: 20px;
+      text-align: center;
+    }
+  }
+}
