@@ -28,11 +28,12 @@
     gap:3px;
     margin-top: 10px;
     margin-left: 10rem;
+    form{
     input{
       width: 15rem;
       padding: 0.5rem 0.5rem;
     }
-    .btnSearch{
+    .btnSearch {
       color: white;
       background-color: black;
       cursor: pointer;
@@ -40,7 +41,7 @@
       padding: 0.6rem;
       width: 5rem;
       border-radius: 5px;
-
+    }
     }
   }
   .loginWrapper{

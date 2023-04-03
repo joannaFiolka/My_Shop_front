@@ -3,7 +3,7 @@ import axios from "axios";
 
 export const AuthContext = createContext();
 
-export const AuthContextProvider =({children}) => {
+export const AuthContextProvider = ({children}) => {
     const [currentUser, setCurrentUser] = useState(
         JSON.parse(localStorage.getItem("user")) || null
     );
@@ -14,15 +14,15 @@ export const AuthContextProvider =({children}) => {
 
         setCurrentUser(res.data)
     }
-    const logout = async() => {
+    const logout = async () => {
         await setCurrentUser(null)
     }
 
-    useEffect(()=>{
+    useEffect(() => {
         localStorage.setItem('user', JSON.stringify(currentUser));
-    },[currentUser])
+    }, [currentUser])
 
-    return(
+    return (
         <AuthContext.Provider value={{currentUser, login, logout}}>{children}</AuthContext.Provider>
     )
 

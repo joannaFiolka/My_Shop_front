@@ -5,14 +5,36 @@
   height: 100vh;
   background: linear-gradient(rgba(6111, 175, 85, 0.5), rgba(111, 175, 85, 0.5)), url("https://images.pexels.com/photos/514914/pexels-photo-514914.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1") center;
   background-size: cover;
-  .card{
+  position: relative;
+
+  .logoLogin{
+    position: absolute;
+    display: flex;
+    top:20px;
+    left: 50px;
+    a{
+      display: flex;
+      align-items: center;
+      margin-left: 2rem;
+      img{
+        width: 4rem;
+      }
+      .logoText{
+        margin-left: 5px;
+        color: black;
+        font-size: 20px;
+      }
+    }
+
+  }
+  .cardLog{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     background-color: #ccd9c1;
-    width: 30rem;
-    height: 30rem;
+    width: 35rem;
+    height: 35rem;
     border-radius: 10px;
     h1{
       margin-bottom: 3rem;

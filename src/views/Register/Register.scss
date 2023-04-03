@@ -1,11 +1,36 @@
-.register{
+.register {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   background: linear-gradient(rgba(6111, 175, 85, 0.5), rgba(111, 175, 85, 0.5)), url("https://images.pexels.com/photos/637076/pexels-photo-637076.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1") center;
   background-size: cover;
-  .card{
+  position: relative;
+
+  .logoLogin {
+    position: absolute;
+    top: 20px;
+    left: 50px;
+
+    a {
+      display: flex;
+      align-items: center;
+      margin-left: 2rem;
+
+      img {
+        width: 4rem;
+      }
+
+      .logoText {
+        margin-left: 5px;
+        color: black;
+        font-size: 20px;
+      }
+    }
+
+  }
+
+  .cardRegister {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,24 +39,28 @@
     width: 30rem;
     height: 30rem;
     border-radius: 10px;
-    h1{
+
+    h1 {
       margin-bottom: 3rem;
       font-size: 2.5rem;
     }
-    form{
+
+    form {
       display: flex;
       justify-content: center;
       align-items: center;
       flex-direction: column;
-      gap:30px;
-      input{
+      gap: 30px;
+
+      input {
         width: 25rem;
         padding: 10px;
         border: none;
         border-radius: 5px;
 
       }
-      button{
+
+      button {
         background-color: #090808;
         border-radius: 5px;
         color: white;

@@ -1,0 +1,181 @@
+.cartPage {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 200px;
+  width: 100%;
+  .containerCart {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+
+
+    hr {
+      border: solid 1px #d5cece;
+      width: 97%;
+    }
+
+    .wrapperCart {
+      display: flex;
+      width: 100%;
+      margin-left: 30px;
+
+      .leftCart {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        flex: 3;
+        gap: 20px;
+
+        .item {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin: 10px;
+          border-bottom: 1px solid gray;
+
+
+          .itemText {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            flex:1;
+
+            img {
+              width: 150px;
+              height: 150px;
+              object-fit: cover;
+              margin: 10px;
+            }
+
+            .details {
+              h2 {
+                font-size: 18px;
+                font-weight: 500;
+              }
+
+              p {
+                color: #256b0d;
+                margin-bottom: 10px;
+                font-size: 14px;
+              }
+            }
+
+            .delete {
+              width: 1.5rem;
+              height: 1.5rem;
+              cursor: pointer;
+              margin-left: 50px;
+            }
+          }
+
+          .price {
+            display: flex;
+            justify-content: center;
+            align-self: center;
+            flex:1;
+
+          }
+
+          .btnQuantity {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            flex:1;
+
+            button {
+              border: navajowhite;
+              color: white;
+              background-color: #cecbcb;
+              font-size: 1.3rem;
+              width: 2rem;
+              height: 2rem;
+              border-radius: 4px;
+            }
+          }
+
+          .totalprice {
+            display: flex;
+            justify-content: center;
+            font-weight: 500;
+            flex:1;
+          }
+
+        }
+
+        hr {
+          border: solid 1px #d5cece;
+          width: 100%;
+        }
+      }
+
+      .rightCart {
+        display: flex;
+        justify-content: start;
+        flex-direction: column;
+        flex: 1;
+        margin: 40px;
+        gap: 20px;
+        h2{
+          text-transform: uppercase;
+          color: #256b0d;
+          text-align: center;
+          font-size: 2rem;
+        }
+
+        .totalPriceRight {
+          display: flex;
+          justify-content: center;
+          align-items: stretch;
+          flex-direction: column;
+          width: 100%;
+
+          .infoP {
+            span{
+              margin: 0 5px;
+              font-size: 1.2rem;
+              color: #7a7777;
+            }
+            .text{
+              color: black;
+            }
+          }
+
+          .priceInfo {
+            margin-top: 20px;
+            font-weight: 500;
+            font-size: 1.5rem;
+          }
+
+        }
+
+        .btn {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          gap: 20px;
+          margin-top: 50px;
+
+          button {
+            background-color: #256b0d;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            width: 100%;
+            font-size: 1rem;
+          }
+
+          .deleteCart {
+            background-color: #b6adad;
+            color: #090808;
+          }
+        }
+      }
+
+    }
+  }
+}

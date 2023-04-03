@@ -5,6 +5,7 @@ import yt from "../../assets/youtube.png"
 
 export const Footer = () => {
     return (
+        <div className="footContainer">
         <div className="footer">
                 <div className="info">
                     <h2>Centum Pomocy</h2>
@@ -35,7 +36,7 @@ export const Footer = () => {
 
                 </div>
 
-
+        </div>
         </div>
     )
 }

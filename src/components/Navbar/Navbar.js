@@ -7,50 +7,69 @@ import {Cart} from "../Cart/Cart";
 import {useSelector} from "react-redux";
 import {AuthContext} from "../../context/AuthCotext";
 
+
 export const Navbar = () => {
-    const products = useSelector(state=>state.cart.products );;
-    const [open, setOpen]=useState(false);
-    const {currentUser, user, login, logout } = useContext(AuthContext);
-    const[err, setErr] = useState(false);
+    const products = useSelector(state => state.cart.products);
+    ;
+    const [open, setOpen] = useState(false);
+    const {currentUser, logout} = useContext(AuthContext);
+    const [err, setErr] = useState(false);
     const navigate = useNavigate()
+    const [term, setTerm] = useState("")
 
 
-    const handleLogout = async(e) =>{
+    const handleLogout = async (e) => {
         e.preventDefault()
-        try{
+        try {
             await logout()
             navigate('/');
-        } catch (err){
+        } catch (err) {
             setErr(true)
         }
     }
+
+    const submitHandler = (e) => {
+        e.preventDefault();
+        if (term.trim()) {
+            navigate(`/search/${term}`)
+        } else {
+            navigate('/')
+        }
+    }
+
     return (
+
         <div className="containerN">
             <div className="logo">
-                <Link to="/"  style={{ color: "inherit", textDecoration: "none"}}>
+                <Link to="/" style={{color: "inherit", textDecoration: "none"}}>
                     <img src={logo} alt="shop logo"/>
                     <p className="logoText"> Shoes Shop</p>
                 </Link>
             </div>
             <div className="search">
-                <input type="text" placeholder="Szukaj..."/>
-                <button className="btnSearch"> Szukaj</button>
+                <form onSubmit={submitHandler}>
+                    <input type="text" value={term} placeholder="Szukaj..." onChange={e => setTerm(e.target.value)}/>
+                    <button className="btnSearch" type="submit"> Szukaj</button>
+                </form>
             </div>
 
-                <div className="loginWrapper">
-                    {currentUser ? (<div className="logout"><p>{currentUser.otherDetails.username}</p> <button className="logoutBtn" onClick={handleLogout}>Wyloguj</button></div>): (
-                        <div className="navItem">
-                            <Link to="/register" className="navBtn">REGISTER</Link>
-                            <Link to="/login" className="navBtn">LOGIN</Link>
-                        </div>
-                    )}
-                </div>
+            <div className="loginWrapper">
+                {currentUser ? (<div className="logout"><p>{currentUser.otherDetails.username}</p>
+                    <button className="logoutBtn" onClick={handleLogout}>Wyloguj</button>
+                </div>) : (
+                    <div className="navItem">
+                        <Link to="/register" className="navBtn">REGISTER</Link>
+                        <Link to="/login" className="navBtn">LOGIN</Link>
+                    </div>
+                )}
+            </div>
 
             <div className="basket">
-                <img src={basket} alt="shop cart" onClick={()=>setOpen(!open)}/>
+                <img src={basket} alt="shop cart" onClick={() => setOpen(!open)}/>
                 <span>{products.length}</span>
             </div>
             {open && <Cart/>}
         </div>
     )
+
 }
