@@ -12,7 +12,7 @@ export const Product = () => {
     const dispatch = useDispatch();
     const {data, loading, error} = useFetch(`/products/find/${id}`);
 
-    console.log(data)
+
     return (
         <div className="product">
             {loading ? <LoadingIcon/> :

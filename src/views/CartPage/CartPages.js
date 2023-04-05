@@ -25,35 +25,35 @@ export const CartPages = () => {
                 <div className="wrapperCart">
 
                     <div className="leftCart">
-                         {loading ? <LoadingIcon/>:(products?.map(item => (
-                        <div key={item.id} className="item">
-                            <div className="itemText">
-                                <img src={item.img} alt=""/>
-                                <div className="details">
-                                    <h2>{item.title}</h2>
-                                    <p>Kolor {item.categories}</p>
-                                    <p>Rozmiar {item.categories}</p>
+                        {loading ? <LoadingIcon/> : (products?.map(item => (
+                                <div key={item.id} className="item">
+                                    <div className="itemText">
+                                        <img src={item.img} alt=""/>
+                                        <div className="details">
+                                            <h2>{item.title}</h2>
+                                            <p>Kolor {item.color}</p>
+                                            <p>Rozmiar {item.size}</p>
+
+                                        </div>
+                                        <img className="delete" onClick={() => dispatch(removeItem(item.id))} src={trash}
+                                             alt=""/>
+                                    </div>
+
+                                    <div className="price">
+                                        <p>{item.price} zł/szt</p>
+                                    </div>
+                                    <div className="btnQuantity">
+                                        <button onClick={() => dispatch(decreaseCart(item))}> -</button>
+                                        <p>{item.quantity}</p>
+                                        <button onClick={() => dispatch(addToCart(item))}> +</button>
+                                    </div>
+                                    <div className="totalprice">
+                                        <span> {item.quantity * item.price} zł</span>
+                                    </div>
 
                                 </div>
-                                <img className="delete" onClick={() => dispatch(removeItem(item.id))} src={trash}
-                                     alt=""/>
-                            </div>
-
-                            <div className="price">
-                                <p>{item.price} zł/szt</p>
-                            </div>
-                            <div className="btnQuantity">
-                                <button onClick={() => dispatch(decreaseCart(item))}> -</button>
-                                <p>{item.quantity}</p>
-                                <button onClick={() => dispatch(addToCart(item))}> +</button>
-                            </div>
-                            <div className="totalprice">
-                                <span> {item.quantity * item.price} zł</span>
-                            </div>
-
-                        </div>
-                    )
-                         ))}
+                            )
+                        ))}
 
 
                     </div>

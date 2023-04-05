@@ -1,56 +1,120 @@
-.containerN{
+@import "../../style.scss";
+
+.containerN {
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: sticky;
   height: 3.5rem;
-  top:3rem;
+  top: 3rem;
   background-color: white;
   margin-bottom: 30px;
-  .logo{
+
+  .logo {
     display: flex;
-    a{
+
+    a {
       display: flex;
       align-items: center;
       margin-left: 2rem;
-      img{
-        width: 2rem;
+      @include tablet {
+        margin-left: 0.8rem;
+        margin-bottom: 10px;
       }
-      .logoText{
+      @include mobile {
+        margin-left: 0.5rem;
+        margin-bottom: 5px;
+      }
+
+      img {
+        width: 2rem;
+        margin-left: 1rem;
+        @include mobile {
+          width: 1.5rem;
+          margin-left: 0.2rem;
+        }
+      }
+
+      .logoText {
         margin-left: 5px;
         color: black;
+        @include mobile {
+          font-size: 12px;
+        }
       }
     }
 
   }
-  .search{
+
+  .search {
     display: flex;
-    gap:3px;
+    gap: 3px;
     margin-top: 10px;
     margin-left: 10rem;
-    form{
-    input{
-      width: 15rem;
-      padding: 0.5rem 0.5rem;
+    @include tablet {
+      margin-left: 1.5rem;
     }
-    .btnSearch {
-      color: white;
-      background-color: black;
-      cursor: pointer;
-      border: none;
-      padding: 0.6rem;
-      width: 5rem;
-      border-radius: 5px;
+    @include mobile {
+      margin-left: 1rem;
     }
+
+    form {
+      input {
+        width: 15rem;
+        padding: 0.5rem 0.5rem;
+        @include tablet {
+          width: 5rem;
+        }
+        @include mobile {
+          width: 4rem;
+          font-size: 12px;
+          padding: 0.2rem 0.2rem;
+        }
+        @include tablet {
+          width: 5rem;
+          font-size: 12px;
+          padding: 0.3rem 0.3rem;
+        }
+
+      }
+
+      .btnSearch {
+        color: white;
+        background-color: black;
+        cursor: pointer;
+        border: none;
+        padding: 0.6rem;
+        width: 5rem;
+        border-radius: 5px;
+        @include tablet {
+          width: 3.2rem;
+          padding: 0.35rem;
+        }
+        @include mobile {
+          display: none;
+        }
+      }
     }
   }
-  .loginWrapper{
+
+  .loginWrapper {
     margin-left: 15rem;
-    margin-top:10px;
-    gap:10px;
+    margin-top: 10px;
+    gap: 10px;
     display: flex;
+    @include tablet {
+      margin-left: 1rem;
+    }
+    @include mobile {
+      margin-left: 1rem;
+    }
+
     .navItem {
       display: flex;
+      @include mobile {
+        flex-direction: column;
+      }
+
       .navBtn {
         display: block;
         text-align: center;
@@ -62,12 +126,27 @@
         color: white;
         width: 8rem;
         border-radius: 3px;
+        @include mobile {
+          width: 5rem;
+          font-size: 10px;
+          padding: 2px;
+          margin: 3px;
+        }
+        @include tablet {
+          width: 5rem;
+          font-size: 12px;
+        }
       }
     }
-    .logout{
+
+    .logout {
       display: flex;
       justify-content: center;
       align-items: center;
+      @include mobile {
+        display: none;
+      }
+
       .logoutBtn {
         margin: 5px;
         cursor: pointer;
@@ -77,41 +156,78 @@
         border-radius: 3px;
         padding: 10px 20px;
         border: 1px solid #a9a2a2;
+        @include tablet {
+          width: 6rem;
+        }
+        @include tablet {
+          width: 4rem;
+          font-size: 10px;
+        }
 
       }
-      p{
+
+      p {
         color: #090808;
         border: 1px solid #a9a2a2;
         padding: 10px 15px;
         width: 8rem;
         text-align: center;
         border-radius: 5px;
+        @include tablet {
+          width: 6rem;
+          padding: 5px 10px;
+        }
+        @include tablet {
+          width: 5rem;
+          padding: 2px 4px;
+          font-size: 10px;
+        }
       }
-  }
-
-  }
-  .basket{
-    margin-right: 5rem;
-    margin-top:10px;
-    gap:10px;
-    display: flex;
-    position: relative;
-    img{
-      margin-left: 4rem;
-      width: 2.5rem;
-      align-items: center;
-      margin-top: 5px;
     }
 
-    span{
+  }
+
+  .basket {
+    margin-right: 5rem;
+    margin-top: 10px;
+    gap: 10px;
+    display: flex;
+    position: relative;
+    @include tablet {
+      margin-right: 1rem;
+    }
+    @include mobile {
+      margin-right: 0.5rem;
+      gap: 1px;
+    }
+
+    img {
+      margin-left: 4rem;
+      width: 3rem;
+      align-items: center;
+      margin-top: 5px;
+      margin-right: 5rem;
+
+      @include tablet {
+        margin-right: 1.5rem;
+        margin-left: 1.5rem;
+      }
+      @include mobile {
+        margin-right: 1rem;
+        margin-left: 1rem;
+        width: 2rem;
+      }
+    }
+
+    span {
       position: absolute;
       background-color: #8bbd7a;
       width: 1.5rem;
       height: 1.5rem;
       border-radius: 50%;
       text-align: center;
-      right:-5px;
-     top:-3px;
+      right: 40px;
+      top: -3px;
 
     }
   }

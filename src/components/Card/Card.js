@@ -16,7 +16,7 @@ export const Card = ({item}) => {
                   style={{color: "inherit", textDecoration: "none"}}
             >
                 <div className="imgCard">
-                    <img src={item.img} alt=""/>
+                    <img className="imgCardIm" src={item.img} alt=""/>
                 </div>
                 <div className="textCard">
                     <h2>{item.title}</h2>

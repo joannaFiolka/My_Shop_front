@@ -1,4 +1,4 @@
-
+@import "../../style.scss";
   .card{
     display: flex;
     justify-content: center;
@@ -10,25 +10,61 @@
     margin: 20px;
     height: 100%;
     max-width: 250px;
-
-    .imgCard{
-      flex:4;
-      width: 250px;
-      min-height: 250px;
-
-    img{
-      width: 250px;
-      object-fit: cover;
+    @include mobile {
+      margin: 5px;
+      padding: 0;
+      max-width: 190px;
     }
-  }
-    .textCard {
-      flex:2;
+
+    a {
+      display: flex;
+      flex-direction: column;
       text-align: center;
-      .h2 {
-        font-size: 16px;
+
+      .imgCard {
+        flex: 4;
+        width: 250px;
+        min-height: 250px;
+        @include mobile {
+          width: 180px;
+          min-height: 100px;
+        }
+        @include tablet {
+          width: 220px;
+          min-height: 200px;
+        }
+
+        .imgCardIm {
+          width: 250px;
+          object-fit: cover;
+
+          @include mobile {
+            width: 90%;
+          }
+          @include tablet {
+            width: 200px;
+          }
+        }
       }
-      .productPrice {
-        font-weight: bold;
+
+      .textCard {
+        flex: 2;
+        text-align: center;
+
+        .h2 {
+          font-size: 16px;
+          @include mobile {
+            font-size: 14px;
+          }
+
+        }
+
+        .productPrice {
+          font-weight: bold;
+          @include mobile {
+            font-size: 12px;
+          }
+        }
       }
     }
     .productBtn {
@@ -40,5 +76,11 @@
       cursor: pointer;
       color: white;
       margin-bottom: 50px;
+      @include mobile {
+        margin-bottom: 10px;
+      }
+      @include tablet {
+        margin-bottom: 15px;
+      }
     }
   }

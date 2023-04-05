@@ -3,7 +3,7 @@ import arrowR from "../../assets/right-arrow.png"
 import arrowL from "../../assets/left-arrow.png"
 import {useEffect, useState} from "react";
 
-const imgSlider = ["https://images.pexels.com/photos/167706/pexels-photo-167706.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+const imgSlider = ["https://images.pexels.com/photos/2016145/pexels-photo-2016145.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     "https://images.pexels.com/photos/1161529/pexels-photo-1161529.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     "https://images.pexels.com/photos/812871/pexels-photo-812871.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
 ]

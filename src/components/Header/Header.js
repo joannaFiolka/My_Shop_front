@@ -6,7 +6,7 @@ import yt from "../../assets/youtube.png"
 
 export const Header = () => {
     return (
-        <div className="container">
+        <div className="containerHeader">
             <div className="left">
                 <p>+68 12 36 56 591</p>
                 <p> info@myshop.pl</p>

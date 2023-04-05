@@ -1,3 +1,5 @@
+@import "../../style.scss";
+
 .login{
   display: flex;
   justify-content: center;
@@ -36,9 +38,25 @@
     width: 35rem;
     height: 35rem;
     border-radius: 10px;
+    @include mobile{
+      width: 12rem;
+      height: 20rem;
+    }
+    @include tablet{
+      width: 25rem;
+      height: 30rem;
+    }
     h1{
-      margin-bottom: 3rem;
+      margin-bottom: 4rem;
       font-size: 3rem;
+      @include mobile{
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+      }
+      @include tablet{
+        font-size: 3rem;
+        margin-bottom: 2rem;
+      }
     }
 form{
   display: flex;
@@ -52,6 +70,12 @@ form{
     border: none;
     border-radius: 5px;
 
+    @include mobile{
+      width: 80%;
+    }
+    @include tablet{
+      width: 100%;
+    }
   }
   button{
     background-color: #090808;
@@ -63,6 +87,14 @@ form{
     padding: 10px;
     width: 15rem;
     margin: 10px;
+    @include mobile{
+      width: 50%;
+      font-size: 14px;
+    }
+    @include tablet{
+      width: 80%;
+      font-size: 18px;
+    }
 
   }
 }
