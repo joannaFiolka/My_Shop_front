@@ -1,0 +1,49 @@
+@import "../../style.scss";
+
+.featuredProduct {
+  .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 80px;
+    @include mobile {
+      margin-bottom: 20px;
+      align-items: start;
+    }
+    @include tablet {
+      margin-bottom: 30px;
+      align-items: start;
+    }
+
+    h1 {
+      flex: 2;
+    }
+
+    p {
+      flex: 3;
+      color: gray;
+    }
+  }
+
+  .bottom {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    .bottomWrapper {
+      display: flex;
+      justify-content: center;
+      gap: 50px;
+      flex-wrap: wrap;
+      max-width: 100%;
+      @include mobile {
+        gap: 10px;;
+      }
+    }
+
+    .paginationWrapper {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}

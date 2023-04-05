@@ -1,0 +1,55 @@
+@import "../../style.scss";
+.containerHeader{
+  display: flex;
+  background: #2b832b;
+  justify-content: space-between;
+  color: #fff;
+  position: sticky;
+  height: 3rem;
+  top:0;
+  width: 100vw;
+  @include tablet{
+    justify-content: space-around;
+  }
+  .left{
+    display: flex;
+    justify-content: start;
+    gap: 2rem;
+    margin-left: 2rem;
+    @include mobile{
+      margin-left: 1rem;
+    }
+    @include tablet{
+      margin-left: 2rem;
+    }
+
+    p{
+      padding: 5px;
+      font-weight: bold;
+      @include mobile{
+        font-size: 10px;
+      }
+    }
+  }
+  .right{
+    display: flex;
+    align-items: center;
+    margin-right: 3rem;
+    gap:20px;
+    @include mobile{
+      margin-right: 1rem;
+    }
+    @include tablet{
+      margin-right: 1.5rem;
+    }
+    img{
+      width: 2rem;
+      @include mobile{
+        width: 1.5rem;
+      }
+      @include tablet{
+        width: 1.5rem;
+      }
+    }
+  }
+}
