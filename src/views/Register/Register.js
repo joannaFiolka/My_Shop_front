@@ -3,6 +3,7 @@ import {useState} from "react";
 import axios from "axios";
 import {Link} from "react-router-dom";
 import logo from "../../assets/app-store.png";
+import {apiUrl} from "../../config/api";
 
 
 export const Register = () => {
@@ -20,7 +21,7 @@ export const Register = () => {
     const handleClick = async (e) => {
         e.preventDefault()
         try {
-            await axios.post('http://localhost:3002/auth/register', inputs)
+            await axios.post(`${apiUrl}/auth/register`, inputs)
         } catch (err) {
             setErr(err.message)
         }
