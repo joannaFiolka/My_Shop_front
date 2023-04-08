@@ -16,7 +16,6 @@ export const CartPages = () => {
         return total.toFixed(2)
     }
 
-
     return (
         <div className="cartPage">
             <div className="containerCart">
@@ -33,7 +32,6 @@ export const CartPages = () => {
                                             <h2>{item.title}</h2>
                                             <p>Kolor {item.color}</p>
                                             <p>Rozmiar {item.size}</p>
-
                                         </div>
                                         <img className="delete" onClick={() => dispatch(removeItem(item.id))} src={trash}
                                              alt=""/>
@@ -54,7 +52,6 @@ export const CartPages = () => {
                                 </div>
                             )
                         ))}
-
 
                     </div>
                     <div className="rightCart">
@@ -77,7 +74,6 @@ export const CartPages = () => {
                         </div>
                         <div className="btn">
                             <button>Przejdź dalej</button>
-
                             <button className="deleteCart" onClick={() => dispatch(resetCart())}>Usuń koszyk</button>
                         </div>
                     </div>

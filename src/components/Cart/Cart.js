@@ -16,7 +16,6 @@ export const Cart = () => {
         return total.toFixed(2)
     }
 
-
     return (
         <div className="cart">
             <h1>Produkty w twoim koszyku </h1>
@@ -43,7 +42,6 @@ export const Cart = () => {
             </div>
             <div className="btn">
                 <Link onClick={() => setOpen(!open)} to="/cart">Przejdź do koszyka </Link>
-
                 <button className="deleteCart" onClick={() => dispatch(resetCart())}>Usuń koszyk</button>
             </div>
         </div>

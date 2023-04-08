@@ -16,8 +16,8 @@ export const Register = () => {
     const [err, setErr] = useState(null)
     const handleChange = e => {
         setInputs(prev => ({...prev, [e.target.name]: e.target.value}))
-
     }
+
     const handleClick = async (e) => {
         e.preventDefault()
         try {
@@ -45,7 +45,6 @@ export const Register = () => {
                     <input name="password" type="password" placeholder="Password" onChange={handleChange}/>
                     {err && err}
                     <button onClick={handleClick}>Zarejestruj się</button>
-
                 </form>
             </div>
 

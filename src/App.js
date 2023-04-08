@@ -7,12 +7,10 @@ import {Register} from "./views/Register/Register";
 import {CartPages} from "./views/CartPage/CartPages";
 import {Layout} from "./components/Layout/Layout";
 
-
 export const App = () => {
 
     return (
         <BrowserRouter>
-
             <Routes>
                 <Route path='/login' element={<Login/>}/>
                 <Route path='/register' element={<Register/>}/>

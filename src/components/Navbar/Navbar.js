@@ -10,13 +10,11 @@ import {AuthContext} from "../../context/AuthCotext";
 
 export const Navbar = () => {
     const products = useSelector(state => state.cart.products);
-    ;
     const [open, setOpen] = useState(false);
     const {currentUser, logout} = useContext(AuthContext);
     const [err, setErr] = useState(false);
     const navigate = useNavigate()
     const [term, setTerm] = useState("")
-
 
     const handleLogout = async (e) => {
         e.preventDefault()
@@ -38,7 +36,6 @@ export const Navbar = () => {
     }
 
     return (
-
         <div className="containerN">
             <div className="logo">
                 <Link to="/" style={{color: "inherit", textDecoration: "none"}}>
@@ -52,7 +49,6 @@ export const Navbar = () => {
                     <button className="btnSearch" type="submit"> Szukaj</button>
                 </form>
             </div>
-
             <div className="loginWrapper">
                 {currentUser ? (<div className="logout"><p>{currentUser.otherDetails.username}</p>
                     <button className="logoutBtn" onClick={handleLogout}>Wyloguj</button>
@@ -63,7 +59,6 @@ export const Navbar = () => {
                     </div>
                 )}
             </div>
-
             <div className="basket">
                 <img src={basket} alt="shop cart" onClick={() => setOpen(!open)}/>
                 <span>{products.length}</span>
@@ -71,5 +66,4 @@ export const Navbar = () => {
             {open && <Cart/>}
         </div>
     )
-
 }

@@ -21,7 +21,6 @@ export const Card = ({item}) => {
                 <div className="textCard">
                     <h2>{item.title}</h2>
                     <p className="productPrice">{item.price} zł</p>
-
                 </div>
             </Link>
 
@@ -34,7 +33,7 @@ export const Card = ({item}) => {
                             img: item.img,
                             quantity,
                         }))
-                    }}>Dodaj do koszka
+                    }}>Dodaj do koszyka
             </button>
 
         </div>

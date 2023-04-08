@@ -3,12 +3,10 @@ import axios from "axios";
 import {makeRequest} from "../../makeRequest";
 
 
-
 const useFetch = (url) => {
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(false);
-
 
     useEffect(() => {
         const fetchData = async () => {
@@ -23,7 +21,6 @@ const useFetch = (url) => {
         };
         fetchData();
     }, [url]);
-
 
     const reFetch = async () => {
         setLoading(true);
