@@ -31,7 +31,6 @@ export const Footer = () => {
                     <span> <img src={yt} alt=""/> You Tube</span>
                     <span> <img src={inst} alt=""/> Instagram</span>
                 </div>
-
             </div>
         </div>
     )

@@ -3,7 +3,6 @@ import fb from "../../assets/facebook.png"
 import inst from "../../assets/instagram.png"
 import yt from "../../assets/youtube.png"
 
-
 export const Header = () => {
     return (
         <div className="containerHeader">

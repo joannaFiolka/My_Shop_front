@@ -12,7 +12,6 @@ export const Product = () => {
     const dispatch = useDispatch();
     const {data, loading, error} = useFetch(`/products/find/${id}`);
 
-
     return (
         <div className="product">
             {loading ? <LoadingIcon/> :
@@ -37,7 +36,6 @@ export const Product = () => {
                             quantity,
                         }))}>Dodaj do koszyka
                         </button>
-
 
                         <div className="details">
                             <h2>Szczegóły</h2>
